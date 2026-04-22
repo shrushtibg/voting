@@ -40,4 +40,14 @@ model.fit(X, y)
 
 # Prediction
 if st.button("Predict Voting Behavior"):
-    input_data = np.array([[age
+    input_data = np.array([[age, income, edu, emp, political_interest, past_vote]])
+    prediction = model.predict(input_data)
+
+    if prediction[0] == 1:
+        st.success("Will Vote 🗳️✅")
+    else:
+        st.error("Will Not Vote ❌")
+
+# Sidebar
+st.sidebar.header("About")
+st.sidebar.write("Random Forest classification model for voting prediction.")

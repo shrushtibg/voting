@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import sklearn
 from sklearn.ensemble import RandomForestClassifier
 
 st.title("Voting Prediction App")
